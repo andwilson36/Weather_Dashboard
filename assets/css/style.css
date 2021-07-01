@@ -1,0 +1,65 @@
+html {
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 2%, rgba(0,212,255,1) 100%);
+}
+
+header {
+    color: floralwhite;
+    background: rgb(209,209,209);
+    background: linear-gradient(86deg, rgba(209,209,209,1) 15%, rgb(137, 137, 139) 39%);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-family: 'Hind', sans-serif;
+    border-bottom: 2px solid rgb(164, 164, 177);
+}
+
+h1 {
+    padding-top: 2rem;
+}
+
+h2 {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.search-form {
+    width: 95%;
+    margin-left: 9px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.city-list {
+    list-style: none;
+}
+
+.search-col {
+    border: 2px solid rgb(164, 164, 177);
+    border-radius: 5px;
+    background-color: rgb(137, 137, 139);
+    font-family: 'Hind', sans-serif;
+    color: floralwhite;
+}
+
+.info-list {
+    border: 2px solid rgb(164, 164, 177);
+    border-radius: 5px;
+    background-color: rgb(137, 137, 139);
+    font-family: 'Hind', sans-serif;
+    color: floralwhite;
+}
+
+.info-list-item {
+    list-style: none;
+    background-color: rgb(137, 137, 139);
+    font-family: 'Hind', sans-serif;
+    color: floralwhite;
+    width: 20%;
+}
+
+h3 {
+    border-top: 2px solid rgb(116, 116, 116);
+}

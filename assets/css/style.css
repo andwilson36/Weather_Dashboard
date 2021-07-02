@@ -32,8 +32,13 @@ h2 {
     margin-top: 10px;
 }
 
+li {
+    margin-left: 10px;
+}
+
 .city-list {
     list-style: none;
+    width: 90%;
 }
 
 .search-col {

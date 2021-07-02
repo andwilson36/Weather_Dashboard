@@ -66,4 +66,15 @@ li {
 
 h3 {
     border-top: 2px solid rgb(116, 116, 116);
+    font-size: 1.6rem;
+}
+
+.weather-cards {
+    font-family: 'Hind', sans-serif;
+    color: floralwhite;
+    text-align: center;
+}
+
+.weather-cards li {
+    border-bottom: 2px solid rgb(164, 164, 177);
 }

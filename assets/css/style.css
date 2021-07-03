@@ -39,6 +39,7 @@ li {
 .city-list {
     list-style: none;
     width: 90%;
+    /* font-size: 1.7rem; */
 }
 
 .search-col {

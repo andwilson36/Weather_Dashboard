@@ -15,7 +15,7 @@ Link to the website: https://andwilson36.github.io/Weather_Dashboard/
 
 ## Images
 This is a image of the website in action, completing all the above objectives.
-![](/assets/images/website_ss.png)
+![](/assets/images/code_snippet.png)
 
 This is a image of JS code from the project.
-![](/assets/images/code_snippet.png)
+![](/assets/images/website_ss.png)

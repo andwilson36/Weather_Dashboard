@@ -97,7 +97,7 @@ function init() {
     lrgDisplay.style.display = 'none';
     getRecentList(); 
 }
-
+// use coords from weather to get more info
 function getUV(coord) {
     lat = coord.coord.lat.toString();
     lon = coord.coord.lon.toString();
@@ -113,7 +113,7 @@ function getUV(coord) {
 })
 
 }
-
+// displays info to screen
 function displayInfo(data) {
     lrgDisplay.style.display = 'inline';
     currCity.textContent = searchedCity;
@@ -122,7 +122,7 @@ function displayInfo(data) {
     humid.textContent = 'Humidity: ' + data.current.humidity + '%';
     UV.textContent = 'UV Index: ' + data.current.uvi; 
 }
-
+// calls the forecast cards
 function getForecast(data) {
     forecast1(data);
     forecast2(data);
@@ -130,7 +130,7 @@ function getForecast(data) {
     forecast4(data);
     forecast5(data);
 }
-
+// displays the forecast information
 function forecast1(data) {
     var cardHead = document.querySelector('.header-1');
     cardHead.textContent = 'Tomorrow';
@@ -179,7 +179,7 @@ function forecast5(data) {
     foreHumid5.textContent = 'Humidity: ' + data.daily[4].humidity + '%';
     foreList5.setAttribute('style', 'list-style:none; font-size:20px; white-space:nowrap; padding-left:0px');
 }
-
+// put recents in local storage and makes sure list doesn't exceed 5
 function setRecentList() {
     console.log(recentArray);
     if(recentArray === null) {
@@ -194,7 +194,7 @@ function setRecentList() {
     }
     getRecentList();
 }
-
+// displays recent cities
 function getRecentList() {
     if(localStorage.getItem('cities') !== null) {
         recentArray = JSON.parse(localStorage.getItem('cities'));
@@ -247,6 +247,71 @@ function getRecentList() {
         } 
     }
 }
+// listeners for the recent list
+city1.addEventListener('click', function() {
+    searchedCity = recentArray[0];
+    var api = getCoordStart + searchedCity + apiKey;
+    fetch(api, {})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            getUV(data);
+            setRecentList();
+        })
+})
+
+city2.addEventListener('click', function() {
+    searchedCity = recentArray[1];
+    var api = getCoordStart + searchedCity + apiKey;
+    fetch(api, {})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            getUV(data);
+            setRecentList();
+        })
+})
+
+city3.addEventListener('click', function() {
+    searchedCity = recentArray[2];
+    var api = getCoordStart + searchedCity + apiKey;
+    fetch(api, {})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            getUV(data);
+            setRecentList();
+        })
+})
+
+city4.addEventListener('click', function() {
+    searchedCity = recentArray[3];
+    var api = getCoordStart + searchedCity + apiKey;
+    fetch(api, {})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            getUV(data);
+            setRecentList();
+        })
+})
+
+city5.addEventListener('click', function() {
+    searchedCity = recentArray[4];
+    var api = getCoordStart + searchedCity + apiKey;
+    fetch(api, {})
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            getUV(data);
+            setRecentList();
+        })
+})
 
 // when page loads 
 init();

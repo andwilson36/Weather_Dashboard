@@ -34,12 +34,24 @@ h2 {
 
 li {
     margin-left: 10px;
+    border-bottom: 2px solid rgb(164, 164, 177);
 }
 
 .city-list {
     list-style: none;
     width: 90%;
-    /* font-size: 1.7rem; */
+    font-size: 1.7rem;
+
+}
+
+.cli1,
+.cli2,
+.cli3,
+.cli4,
+.cli5 {
+    color: floralwhite;
+    background: none;
+    border: none;
 }
 
 .search-col {
@@ -78,4 +90,13 @@ h3 {
 
 .weather-cards li {
     border-bottom: 2px solid rgb(164, 164, 177);
+}
+
+@media screen and (max-width: 991px) {
+    main {
+        flex-direction: column;
+    }
+    .info-col {
+        order: 2;
+    }
 }
